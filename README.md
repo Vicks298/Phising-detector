@@ -1,21 +1,26 @@
 # 🛡️ Phishing URL Detector
 
-A simple Flask web application that checks URLs for common phishing indicators such as:
-- IP addresses in URLs
-- Excessive subdomains
-- Suspicious keywords (login, verify, update, secure, account)
+A simple Python Flask web application that detects potentially suspicious or phishing URLs based on basic rules.
 
 ## 🚀 Features
-- Lightweight Python + Flask backend
-- HTML, CSS frontend
-- Real-time phishing risk feedback
-- Deployable as a Progressive Web App (PWA)
+- Checks if a URL contains an IP address.
+- Detects if a URL has too many subdomains.
+- Looks for phishing-related keywords like `login`, `verify`, `account`, `secure`, etc.
+- Provides a simple, clean web interface for URL testing.
 
-## 📸 Screenshot
-<img src="static/screenshot.png" alt="App Screenshot" width="600">
+---
 
-## 🌐 Live Demo
-[👉 Try the app here](https://your-hosting-link.com)
+## 📸 Screenshots
 
-## 📦 Project Structure
+![App Screenshot](screenshot.png) *(Add a screenshot if you like)*
+
+---
+
+## 🛠️ How to Run Locally
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Vicks298/Phising-detector.git
+   cd Phising-detector
+
 
