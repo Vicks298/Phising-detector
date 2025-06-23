@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phishing Detector</title>
+    <script>
+        function checkPhishing() {
+            const url = document.getElementById('urlInput').value;
+            fetch('/check-url', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({url: url})
+            })
+            .then(response => response.json())
+            .then(data => {
+                let resultDiv = document.getElementById('result');
+                resultDiv.innerHTML = data.result.join('<br>');
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>🔍 Simple Phishing URL Detector</h1>
+    <input type="text" id="urlInput" placeholder="Enter URL here">
+    <button onclick="checkPhishing()">Check URL</button>
+    <div id="result" style="margin-top:20px; font-size:18px;"></div>
+</body>
+</html>
