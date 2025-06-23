@@ -8,13 +8,17 @@
             const url = document.getElementById('urlInput').value;
             fetch('/check-url', {
                 method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({url: url})
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ url: url })
             })
             .then(response => response.json())
             .then(data => {
                 let resultDiv = document.getElementById('result');
                 resultDiv.innerHTML = data.result.join('<br>');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('result').innerHTML = 'Something went wrong.';
             });
         }
     </script>
