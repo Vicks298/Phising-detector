@@ -1,0 +1,9 @@
+url_length,having_ip_address,having_at_symbol,suspicious_words,result
+75,1,0,1,1
+45,0,0,0,0
+88,1,1,1,1
+62,0,0,0,0
+95,1,0,1,1
+40,0,0,0,0
+70,0,1,1,1
+55,0,0,0,0
